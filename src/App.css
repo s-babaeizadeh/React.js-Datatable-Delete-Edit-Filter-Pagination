@@ -1,38 +1,156 @@
-.App {
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color:antiquewhite;
+  color:black
+}
+
+.App{
+  text-align: center;
+  margin: 20px;
+
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 5px;
+  gap: 10px;
+  
+}
+
+.add-container{
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  gap:5px;
+  
+}
+
+.info-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:5px;
+  
+}
+
+input[type="text"],
+button{
+  appearance: none;
+  outline: none;
+  border: 0;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border-radius:10px
+}
+
+button{
+  font-weight: 600;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.add{
+  background-color: #eeac33;
+  color:#fff;
+  font-weight: 600;
+  border-radius:10px
+}
+
+.search-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius:10px
+
+}
+
+table{
+  border-collapse: collapse;
+  
+}
+
+table td,table th{
+  border: 1px solid #ddd;
+  padding: 8px;
+  max-width: 350px;
+  word-wrap: break-word;
+  text-align: center;
+  color:black
+}
+
+table td{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+table tr:hove{
+  background-color:#3f3c3c
+}
+
+
+tr th {
+  min-width: 100px;
+}
+
+table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.actions{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:6px
 }
 
-.App-link {
-  color: #61dafb;
+.edit{
+  background-color:lightgreen;
+  color:white;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.delete{
+  background-color:red;
+  color:white;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.button{
+  margin: 3px 0;
+  border-radius:10px
+}
+
+@media only screen and (max-width:600px){
+  tr th{
+    min-width: unset;
   }
-  to {
-    transform: rotate(360deg);
+
+  table td{
+    font-size: 14px;
+  }
+
+  .actions{
+    flex-wrap: wrap;
+    gap:2px
+  }
+
+  button{
+    margin: 3px 0;
+    
   }
 }
+
